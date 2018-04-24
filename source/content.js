@@ -8,6 +8,7 @@ import addOpenAllNotificationsButton from './features/open-all-notifications';
 import openAllSelected from './features/open-all-selected';
 import addUploadBtn from './features/upload-button';
 import enableCopyOnY from './features/copy-on-y';
+import createTestItemIssue from './features/create-testitem-issue';
 import addReactionParticipants from './features/reactions-avatars';
 import showRealNames from './features/show-names';
 import addCopyFilePathToPRs from './features/copy-file-path';
@@ -149,6 +150,7 @@ async function onDomReady() {
 	enableFeature(closeOutOfViewModals);
 	enableFeature(improveShortcutHelp);
 	enableFeature(addUploadBtn);
+	enableFeature(createTestItemIssue);
 
 	if (!pageDetect.isGist()) {
 		enableFeature(moveMarketplaceLinkToProfileDropdown);
