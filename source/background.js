@@ -7,6 +7,7 @@ new OptionsSync().define({
 	defaults: {
 		disabledFeatures: '',
 		customCSS: '',
+		vscodeCurrentMileStone: '',
 		logging: false
 	},
 	migrations: [

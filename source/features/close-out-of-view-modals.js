@@ -17,8 +17,11 @@ const observer = new IntersectionObserver(([{intersectionRatio, target}]) => {
 export default function () {
 	delegate('.dropdown-details, .js-menu-target', 'click', event => {
 		const button = event.delegateTarget;
-		const modal = button
-			.closest('.select-menu, .dropdown')
+		const dropdown = button.closest('.select-menu, .dropdown')
+		if (!dropdown) {
+			return;
+		}
+		const modal = dropdown
 			.querySelector('.select-menu-modal, .dropdown-menu');
 		if (modal && (!button.open || button.classList.contains('selected'))) {
 			observer.observe(modal);
